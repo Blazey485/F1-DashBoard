@@ -1,17 +1,14 @@
-# React + Vite
+F1 Data Website: 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Project SummaryWhat it is: A React-powered web application that serves as a central dashboard for Formula 1.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+What it does:Fetches & Displays Schedules: Automatically pulls live calendar data (via free community APIs like Jolpica F1) to show upcoming and past Grand Prix weekends. 
 
-## React Compiler
+Tracks Countdown Timers: Calculates the exact time remaining until the next race session ("lights out").Shows Championship Standings: Displays real-time tables for the World Drivers' and Constructors' Championships.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+tools: React, tailwind/CSS
+Maybe might use: Lucide animation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# F1-DashBoard
+
