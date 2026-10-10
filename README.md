@@ -12,3 +12,14 @@ tools: React, tailwind/CSS
 Maybe might use: Lucide animation
 
 
+API: yet to figure out
+
+create the design: figma
+
+
+things to do in order:
+
+1. find api
+2. find how to bypass the dammed cors
+3. design it in figma
+4. code it 🥛 😎
