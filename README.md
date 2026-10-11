@@ -1,3 +1,41 @@
+# 🏎️ F1 Real-Time Dashboard
+---
+
+## 🛠️ Tech Stack & Architecture
+
+### Frontend
+* **Framework:** React (Vite)
+* **Styling:** Tailwind CSS or Normal CSS
+
+
+
+### Free F1 APIs Integrated
+1. **Jolpica F1 API**
+   * **Role:** Powers the upcoming race calendar, weekend session timetables, and real-time Driver & Constructor championship standings.
+   * **Access:** Free REST JSON endpoints with zero authentication or API keys required.
+2. **OpenF1 API**
+   * **Role:** Fetches session telemetry metadata, track/air weather changes, and historical lap data.
+   * **Access:** Free Community Tier (no key needed; live real-time endpoints require a sponsor tier, but post-session/historical views are fully accessible).
+
+### Designing app
+1. **Figma** 
+
+---
+
+## 📂 Project Structure
+
+```text
+f1-dashboard/
+│
+├── client/                  # React Frontend
+│   ├── src/
+│   │   ├── components/      # Standings, Leaderboards, Weather Widget, Schedule
+│   │   ├── services/        # API client modules for Jolpica & OpenF1
+│   │   └── App.jsx
+│   └── package.json
+```
+
+
 F1 Data Website: 
 
 Project SummaryWhat it is: A React-powered web application that serves as a central dashboard for Formula 1.
@@ -14,10 +52,22 @@ tools: React, tailwind/CSS
 Maybe might use: Lucide animation
 
 
-API: yet to figure out
+API: https://openf1.org/
 
-create the design: figma
+But i also asked AI, what the best free api for f1 is. and it said this: 
 
+# 1. Jolpica F1 API (Schedules & Standings)
+* **What it covers:** Upcoming race calendars, circuit details, session timetables, and current Driver & Constructor championship standings.
+* **Cost & Access:** 100% free, REST-based JSON responses, with zero API keys or authentication required.
+
+# 2. OpenF1 API (Leaderboards, Telemetry & Weather)
+* **What it covers:** Practice, Qualifying, Sprint, and Grand Prix session leaderboards, historical lap times, pit stops, weather metrics, and deep car telemetry.
+* **Cost & Access:** 
+  * **Historical & Post-Session Data:** Free forever. Every session from 2023 onward can be queried without charge or API keys.
+  * **Real-Time Live Streaming:** Absolute real-time streaming while a session is actively happening (starting 30 minutes before to 30 minutes after) requires a paid sponsor tier. Outside of that live window, the exact same data becomes free.
+
+
+# create the design: Figma
 
 things to do in order:
 
@@ -25,3 +75,5 @@ things to do in order:
 2. find how to bypass the dammed cors
 3. design it in figma
 4. code it 🥛 😎
+
+
