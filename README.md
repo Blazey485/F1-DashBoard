@@ -82,4 +82,5 @@ things to do in order:
 3. design it in figma
 4. code it 🥛 😎
 
-
+first figma mockup: 
+![alt text](/Mini-Projects/F1-DashBoard/public/MockupDesgin.png)
