@@ -83,4 +83,4 @@ things to do in order:
 4. code it 🥛 😎
 
 first figma mockup: 
-![alt text](/Mini-Projects/F1-DashBoard/public/MockupDesgin.png)
+![alt text](./public/MockupDesgin.png)
