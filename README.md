@@ -66,6 +66,12 @@ But i also asked AI, what the best free api for f1 is. and it said this:
   * **Historical & Post-Session Data:** Free forever. Every session from 2023 onward can be queried without charge or API keys.
   * **Real-Time Live Streaming:** Absolute real-time streaming while a session is actively happening (starting 30 minutes before to 30 minutes after) requires a paid sponsor tier. Outside of that live window, the exact same data becomes free.
 
+Feature	API
+Championship standings	Jolpica
+Track list and circuit info	Jolpica
+Driver laps	OpenF1
+Track temp	OpenF1
+Weather forecast	Open-Meteo
 
 # create the design: Figma
 
