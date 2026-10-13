@@ -1,7 +1,7 @@
 import "./css/LeaderBoard";
 
-function LeaderBoard() {
-	return <></>;
-}
+const LeaderBoard = () => {
+	return <div></div>;
+};
 
 export default LeaderBoard;
