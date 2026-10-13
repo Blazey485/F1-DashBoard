@@ -1,10 +1,18 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import "./css/main.css";
+/* eslint-disable react-refresh/only-export-components */
+import { createRoot } from "react-dom/client";
+// import "./css/main.css";
 import LeaderBoard from "./LeaderBoard.jsx";
 
-createRoot(document.getElementById("root")).render(
-	<StrictMode>
-		<LeaderBoard />
-	</StrictMode>
+const RootApp = () => {
+	return (
+		<div>
+			<LeaderBoard></LeaderBoard>
+		</div>
+	);
+};
+
+const rootLayout = createRoot(
+	document.getElementById("root")
 );
+
+rootLayout.render(<RootApp></RootApp>);
