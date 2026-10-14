@@ -1,10 +1,26 @@
 // import "./css/LeaderBoard"
-/* eslint-disable react-refresh/only-export-components */
 
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
+//! Btw this is for the driver constructor
 const LeaderBoard = () => {
 	const [masterLD, setMasterLD] = useState();
+
+	useEffect(() => {
+		fetchLeader();
+	}, []);
+
+	const fetchLeader = async () => {
+		const data = await fetch(
+			"https://api.jolpi.ca/ergast/f1/2026/driverstandings/?format=json"
+		);
+		const json = await data.json();
+
+
+
+		setMasterLD(json?.StandingsTable?.StandingsLists);
+
+		console.log(setMasterLD);
+	};
 
 	return (
 		<div className="LeaderBoard">

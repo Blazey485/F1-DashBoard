@@ -1,6 +1,8 @@
 import { createRoot } from "react-dom/client";
 // import "./css/main.css";
-import LeaderBoard from "./LeaderBoard.jsx";
+
+
+import LeaderBoard from "./LeaderBoard";
 
 const RootApp = () => {
 	return (
