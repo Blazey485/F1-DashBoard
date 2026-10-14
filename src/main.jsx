@@ -1,4 +1,3 @@
-/* eslint-disable react-refresh/only-export-components */
 import { createRoot } from "react-dom/client";
 // import "./css/main.css";
 import LeaderBoard from "./LeaderBoard.jsx";
