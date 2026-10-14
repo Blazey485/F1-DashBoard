@@ -1,6 +1,11 @@
 // import "./css/LeaderBoard"
+/* eslint-disable react-refresh/only-export-components */
+
+import { useState } from "react";
 
 const LeaderBoard = () => {
+	const [masterLD, setMasterLD] = useState();
+
 	return (
 		<div className="LeaderBoard">
 			<h1>Leader Board</h1>
