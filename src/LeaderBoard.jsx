@@ -15,12 +15,10 @@ const LeaderBoard = () => {
 		);
 		const json = await data.json();
 
-
-
-		setMasterLD(json?.StandingsTable?.StandingsLists);
-
-		console.log(setMasterLD);
+		setMasterLD(json?.MRData?.StandingsTable?.StandingsLists);
 	};
+
+	console.log(masterLD);
 
 	return (
 		<div className="LeaderBoard">
