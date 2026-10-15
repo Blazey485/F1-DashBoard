@@ -1,4 +1,4 @@
-const LeaderAPI = (props) => {
+const standings = (props) => {
 	const apiData = props;
 
 	//- for the positions
@@ -37,3 +37,5 @@ const LeaderAPI = (props) => {
 		</div>
 	);
 };
+
+export default standings;
