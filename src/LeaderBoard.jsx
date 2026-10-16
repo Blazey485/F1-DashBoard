@@ -1,6 +1,8 @@
 // import "./css/LeaderBoard"
-
 import { useState, useEffect } from "react";
+
+import Standing from "./Standing.jsx";
+
 //! Btw this is for the driver constructor
 const LeaderBoard = () => {
 	const [masterLD, setMasterLD] = useState();
@@ -27,8 +29,12 @@ const LeaderBoard = () => {
 		<div className="LeaderBoard">
 			<h1>Leader Board</h1>
 			<div className="Drivers">
-				<h3>10/43</h3>
-				<h4> driver</h4>
+				{masterLD.map((Champions) => (
+					<Standing
+						key={Champions.apiData.Driver}
+						apiData={Champions}
+					/>
+				))}
 			</div>
 		</div>
 	);
