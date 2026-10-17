@@ -17,16 +17,16 @@ const Standings = (props) => {
 	return (
 		<div>
 			<div className="Driver">
+				{/* position */}
+				<p>{position}</p>
 				{/* Team  */}
 				<p>{name}</p>
 				{/* fullname / family name */}
 				<p>{familyName}</p>
 				{/* Wins */}
-				<p>{wins}</p>
+				<p>Wins: {wins}</p>
 				{/* points */}
-				<p>{points}</p>
-				{/* position */}
-				<p>{position}</p>
+				<p>Points: {points}</p>
 			</div>
 		</div>
 	);

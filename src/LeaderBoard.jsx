@@ -23,7 +23,11 @@ const LeaderBoard = () => {
 				?.DriverStandings
 		);
 	};
+
+	console.log("masterset");
 	console.log(setMasterLD);
+
+	console.log("masternormal");
 	console.log(masterLD);
 	return (
 		<div className="LeaderBoard">
