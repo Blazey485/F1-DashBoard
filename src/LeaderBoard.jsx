@@ -5,7 +5,7 @@ import Standing from "./Standing.jsx";
 
 //! Btw this is for the driver constructor
 const LeaderBoard = () => {
-	const [masterLD, setMasterLD] = useState();
+	const [masterLD, setMasterLD] = useState([]);
 	const [Driver, setDriver] = useState();
 	const [Constructor, setConstructor] = useState();
 	useEffect(() => {
@@ -19,26 +19,24 @@ const LeaderBoard = () => {
 		const json = await data.json();
 
 		setMasterLD(
-			json?.MRData?.StandingsTable?.StandingsLists
+			json?.MRData?.StandingsTable?.StandingsLists[0]?.DriverStan
 		);
 	};
-
+	console.log(setMasterLD);
 	console.log(masterLD);
-
 	return (
 		<div className="LeaderBoard">
 			<h1>Leader Board</h1>
 			<div className="Drivers">
-				{masterLD.map((Champions) => (
+				{setMasterLD.map((Champions) => (
 					<Standing
-						key={Champions.apiData.Driver}
+						key={Champions.position}
 						apiData={Champions}
 					/>
 				))}
 			</div>
 		</div>
 	);
-	
 };
 
 export default LeaderBoard;
