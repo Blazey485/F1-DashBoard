@@ -1,5 +1,5 @@
 const Standings = (props) => {
-	const apiData = props;
+	const { apiData } = props;
 
 	//- for the positions
 	const { position, points, wins, Driver, Constructors } =
@@ -9,7 +9,7 @@ const Standings = (props) => {
 		driverId,
 		permanentNumber,
 		familyName,
-		nationality
+		nationality	
 	} = Driver || {};
 
 	return (
