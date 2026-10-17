@@ -38,6 +38,7 @@ const LeaderBoard = () => {
 			</div>
 		</div>
 	);
+	
 };
 
 export default LeaderBoard;

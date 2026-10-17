@@ -2,7 +2,7 @@ const standings = (props) => {
 	const apiData = props;
 
 	//- for the positions
-	const { position, points, wins, Driver } =
+	const { position, points, wins } =
 		apiData?.StandingsTable?.DriverStandings;
 
 	//- for driver info, like their info shi
