@@ -1,7 +1,7 @@
 // import "./css/LeaderBoard"
 import { useState, useEffect } from "react";
 
-import Standing from "./Standing.jsx";
+import Standing from "./Standings.jsx";
 
 //! Btw this is for the driver constructor
 const LeaderBoard = () => {
@@ -19,7 +19,8 @@ const LeaderBoard = () => {
 		const json = await data.json();
 
 		setMasterLD(
-			json?.MRData?.StandingsTable?.StandingsLists[0]?.DriverStan
+			json?.MRData?.StandingsTable?.StandingsLists[0]
+				?.DriverStandings
 		);
 	};
 	console.log(setMasterLD);
@@ -28,7 +29,7 @@ const LeaderBoard = () => {
 		<div className="LeaderBoard">
 			<h1>Leader Board</h1>
 			<div className="Drivers">
-				{setMasterLD.map((Champions) => (
+				{masterLD.map((Champions) => (
 					<Standing
 						key={Champions.position}
 						apiData={Champions}

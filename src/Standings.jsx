@@ -1,23 +1,22 @@
-const standings = (props) => {
+const Standings = (props) => {
 	const apiData = props;
 
 	//- for the positions
-	const { position, points, wins } =
-		apiData?.StandingsTable?.DriverStandings;
-
+	const { position, points, wins, Driver, Constructors } =
+		apiData || {};
 	//- for driver info, like their info shi
 	const {
 		driverId,
 		permanentNumber,
 		familyName,
 		nationality
-	} = apiData?.StandingsTable?.DriverStandings?.Driver;
+	} = Driver || {};
 
 	return (
 		<div>
 			<div className="Driver">
 				{/* team */}
-				<p></p>
+				<p>{points}</p>
 
 				{/* Driver num */}
 				<p>{driverId}</p>
@@ -38,4 +37,4 @@ const standings = (props) => {
 	);
 };
 
-export default standings;
+export default Standings;
