@@ -9,29 +9,24 @@ const Standings = (props) => {
 		driverId,
 		permanentNumber,
 		familyName,
-		nationality	
+		nationality
 	} = Driver || {};
+
+	const { constructorId, name } = Constructors[0] || {};
 
 	return (
 		<div>
 			<div className="Driver">
-				{/* team */}
-				<p>{points}</p>
-
-				{/* Driver num */}
-				<p>{driverId}</p>
-
+				{/* Team  */}
+				<p>{name}</p>
 				{/* fullname / family name */}
 				<p>{familyName}</p>
-
-				{/* points */}
-				<p>{points}</p>
-
-				{/* position */}
-				<p>{position}</p>
-
 				{/* Wins */}
 				<p>{wins}</p>
+				{/* points */}
+				<p>{points}</p>
+				{/* position */}
+				<p>{position}</p>
 			</div>
 		</div>
 	);
