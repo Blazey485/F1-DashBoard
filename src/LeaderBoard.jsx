@@ -30,7 +30,7 @@ const LeaderBoard = () => {
 	console.log("masternormal");
 	console.log(masterLD);
 	return (
-		<div className="LeaderBoard">
+		<div className="bg-black-100">
 			<h1>Leader Board</h1>
 			<div className="Drivers">
 				{masterLD.map((Champions) => (
