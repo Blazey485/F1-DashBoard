@@ -31,7 +31,6 @@ const LeaderBoard = () => {
 	console.log(masterLD);
 	return (
 		<div className="bg-black-100">
-			<h1>Leader Board</h1>
 			<div className="Drivers">
 				{masterLD.map((Champions) => (
 					<Standing
