@@ -52,7 +52,9 @@ tools: React, tailwind/CSS
 Maybe might use: Lucide animation
 
 
-API: https://openf1.org/
+API: https://openf1.org/docs/#api-endpoints
+
+* also suggest https://f1dash.net/api it has lot of functions. 
 
 But i also asked AI, what the best free api for f1 is. and it said this: 
 
