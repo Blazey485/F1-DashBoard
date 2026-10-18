@@ -54,6 +54,8 @@ Maybe might use: Lucide animation
 
 API: https://openf1.org/docs/#api-endpoints
 
+https://api.jolpi.ca/ergast/ has all the endpoints they offer
+
 * also suggest https://f1dash.net/api it has lot of functions. 
 
 But i also asked AI, what the best free api for f1 is. and it said this: 
