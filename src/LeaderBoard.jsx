@@ -9,7 +9,6 @@ const LeaderBoard = () => {
 	const [Driver, setDriver] = useState();
 	const [Constructor, setConstructor] = useState();
 
-	
 	useEffect(() => {
 		fetchLeader();
 	}, []);
