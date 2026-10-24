@@ -10,6 +10,7 @@ const RootApp = () => {
 	return (
 		<div>
 			<LeaderBoard></LeaderBoard>
+			<p>{console.log(apiKey)}</p>
 		</div>
 	);
 };
