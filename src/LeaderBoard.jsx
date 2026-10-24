@@ -8,6 +8,8 @@ const LeaderBoard = () => {
 	const [masterLD, setMasterLD] = useState([]);
 	const [Driver, setDriver] = useState();
 	const [Constructor, setConstructor] = useState();
+
+	
 	useEffect(() => {
 		fetchLeader();
 	}, []);
@@ -24,11 +26,6 @@ const LeaderBoard = () => {
 		);
 	};
 
-	console.log("masterset");
-	console.log(setMasterLD);
-
-	console.log("masternormal");
-	console.log(masterLD);
 	return (
 		<div className="bg-black-100">
 			<div className="Drivers">
