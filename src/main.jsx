@@ -2,8 +2,7 @@ import { createRoot } from "react-dom/client";
 
 import LeaderBoard from "./LeaderBoard";
 import "./css/LeaderBoard.css";
-const apiKey = import.meta.env.VITE_REACT_SCHEDULE_API_KEY;
-
+import Scheduale from "./Sche"
 const RootApp = () => {
 	return (
 		<div>
