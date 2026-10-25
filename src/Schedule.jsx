@@ -39,7 +39,7 @@ const Scheduale = () => {
 					>
 						<p className="my-2 px-3 py-1 flex items-center gap-4">
 							<span className="bg-indigo-600/20 text-indigo-400 border border-indigo-500/30 px-2 py-0.5 rounded text-xs font-semibold">
-								R{race.round}
+								Race{race.round}
 							</span>
 							<span className="text-slate-100 font-medium flex-1">
 								{race.raceName}
