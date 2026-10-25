@@ -28,14 +28,17 @@ const Scheduale = () => {
 	};
 
 	return (
-		<div className="text-white">
-			<h1>Scheduale</h1>
-			{scheduale.map((race) => (
-				<p key={race.round}>
-					{race.round}. {race.raceName} – {race.date}
-				</p>
-			))}
-			<span></span>
+		<div className="text-gray">
+			<div className=" bg-amber-600">
+				{scheduale.map((race) => (
+					<p
+						className=" "
+						key={race.round}
+					>
+						{race.round}. {race.raceName} – {race.date}
+					</p>
+				))}
+			</div>
 		</div>
 	);
 };

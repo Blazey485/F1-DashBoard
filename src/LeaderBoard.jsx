@@ -25,6 +25,8 @@ const LeaderBoard = () => {
 		);
 	};
 
+	//todo : Make so every GP is like clickable/expandable so once you click on it shows when the FP1, FP2, FP3, QUALI, GP. This will help enormous cus i want to have everything in 1 page, so we gotta clamp down bby 😘. and also i want to find a way to remove "expierd" gps. not sure how tf i can do that, will ask AI for help but wont copy paste. committing this todo to GH as well. written on line 28
+
 	return (
 		<div className="bg-black-100">
 			<div className="Drivers">
