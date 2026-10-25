@@ -30,15 +30,18 @@ const Scheduale = () => {
 	//todo : Make so every GP is like clickable/expandable so once you click on it shows when the FP1, FP2, FP3, QUALI, GP. This will help enormous cus i want to have everything in 1 page, so we gotta clamp down bby 😘. and also i want to find a way to remove "expierd" gps. not sure how tf i can do that, will ask AI for help but wont copy paste. committing this todo to GH as well. written on line 28
 
 	return (
-		<div className="text-gray">
-			<div className=" bg-amber-600">
+		<div className="text-gray w-90">
+			<div className=" bg-amber-600 flex-nowrap flex flex-col">
 				{scheduale.map((race) => (
-					<p
-						className=" "
+					<button
+						className="cursor-pointer w-full"
+						// className="cursor-pointer border-8 border-yellow-500 w-full text-left"
 						key={race.round}
 					>
-						{race.round}. {race.raceName} – {race.date}
-					</p>
+						<p className=" my-2 border-2 p-1">
+							{race.round}. {race.raceName} – {race.date}
+						</p>
+					</button>
 				))}
 			</div>
 		</div>
