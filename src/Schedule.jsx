@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import SchedualePopup from "./SchedulePopup";
 const Scheduale = () => {
 	const [scheduale, setScheduale] = useState([]);
 
