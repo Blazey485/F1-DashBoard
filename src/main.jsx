@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import LeaderBoard from "./LeaderBoard";
 import "./css/LeaderBoard.css";
 import Scheduale from "./Schedule";
+import SchedualePopup from "./SchedulePopup";
 const RootApp = () => {
 	return (
 		<div
@@ -11,7 +12,8 @@ const RootApp = () => {
 			bg-black"
 		>
 			<LeaderBoard></LeaderBoard>
-			<Scheduale> </Scheduale>
+			{/* <Scheduale> </Scheduale> */}
+			<SchedualePopup></SchedualePopup>
 		</div>
 	);
 };
