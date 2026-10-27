@@ -28,6 +28,13 @@ const SchedualePopup = () => {
 
 	return (
 		<div className="text-white">
+			<h2>
+				{" "}
+				<p>
+					BTW THE TIME IS UTC +0 MEANING THE TIME IS 2 HOURS
+					BEHIND EU-TIME
+				</p>
+			</h2>
 			<div>
 				{data.map((info) => (
 					<div key={info.round}>
