@@ -20,7 +20,7 @@ const Scheduale = () => {
 				return;
 			}
 			const json = await Scheduale.json();
-			console.log(json);
+
 			setScheduale(json.MRData.RaceTable.Races);
 		} catch (err) {
 			console.log("error fetching:", err);
@@ -31,6 +31,7 @@ const Scheduale = () => {
 
 	return (
 		<div className="text-gray-300 w-80">
+			<SchedualePopup></SchedualePopup>
 			<div className="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden flex flex-col">
 				{scheduale.map((race) => (
 					<button

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const SchedualePopup = () => {
-	const [date, setDate] = useState([]);
+	const [data, setDate] = useState([]);
 	useEffect(() => {
 		fetchDates();
 	}, []);
@@ -13,8 +13,8 @@ const SchedualePopup = () => {
 			);
 			if (!Date.ok) {
 				console.error(
-					`Server error (${Scheduale.status}):`,
-					await Scheduale.text()
+					`Server error (${Date.status}):`,
+					await Date.text()
 				);
 				return;
 			}
@@ -29,9 +29,13 @@ const SchedualePopup = () => {
 	return (
 		<div>
 			<div>
-				{setDate.map((info) => (
+				{data.map((info) => (
 					<div key={info.round}>
 						<h1>{info.Circuit.circuitName}</h1>
+                  <br />
+                  <div className="Practice">
+                     <h3></h3>
+                  </div>
 					</div>
 				))}
 			</div>
