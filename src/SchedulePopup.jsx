@@ -31,17 +31,23 @@ const SchedualePopup = () => {
 			<div>
 				{data.map((info) => (
 					<div key={info.round}>
-						<h1>
-							{info.Circuit.circuitName}. Location:{" "}
-							{/* {info.Location.locality},{" "}
-							{info.Location.locality.country} */}
-						</h1>
 						<br />
+
+						<h1>
+							{info.round} {""}
+							{info.Circuit.circuitName}. Location:{" "}
+							{info.Circuit.Location.locality},{" "}
+							{info.Circuit.Location.locality.country}
+						</h1>
+
 						<div className="SCHEDULE_PARENT">
 							<div className="Practice1">
 								<h3>First Practice</h3>
-								<span>{info.FirstPractice?.date}</span>
-								<span>{info.FirstPractice?.time}</span>
+								<span>
+									Date: {info.FirstPractice?.date}
+								</span>
+
+								<p>Time: {info.FirstPractice?.time}</p>
 							</div>
 							{info.SecondPractice && (
 								<div className="Practice2">
