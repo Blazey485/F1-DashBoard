@@ -31,7 +31,6 @@ const Scheduale = () => {
 
 	return (
 		<div className="text-gray-300 w-80">
-			<SchedualePopup></SchedualePopup>
 			<div className="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden flex flex-col">
 				{scheduale.map((race) => (
 					<button

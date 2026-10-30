@@ -12,7 +12,7 @@ const RootApp = () => {
 			bg-black"
 		>
 			<LeaderBoard></LeaderBoard>
-			{/* <Scheduale> </Scheduale> */}
+			<Scheduale> </Scheduale>
 			<SchedualePopup></SchedualePopup>
 		</div>
 	);
