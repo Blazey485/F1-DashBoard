@@ -32,10 +32,14 @@ const Scheduale = () => {
 	return (
 		<div className="text-gray-300 w-80">
 			<div className="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden flex flex-col">
+				<h2 className="justify-center items-center text-amber-300">
+					BTW THE TIME IS UTC +0 MEANING THE TIME IS 2 HOURS
+					BEHIND EU-TIME, AND THE DATE IS USA FORMAT
+				</h2>
 				{scheduale.map((race) => (
 					<div key={race.round}>
 						<button
-							className="cursor-pointer w-full bg-slate-800/50 hover:bg-slate-800 transition-colors text-left border-b border-slate-800/80 last:border-b-0"
+							className="cursor-pointer w-full bg-slate-800/50 hover:bg-slaitte-800 transition-colors text-left border-b border-slate-800/80 last:border-b-0"
 							onClick={() =>
 								setCurrentSchedule(
 									currentSchedule === race.round
