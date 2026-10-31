@@ -6,8 +6,6 @@ import Standing from "./Standings.jsx";
 //! Btw this is for the driver constructor
 const LeaderBoard = () => {
 	const [masterLD, setMasterLD] = useState([]);
-	const [Driver, setDriver] = useState();
-	const [Constructor, setConstructor] = useState();
 
 	useEffect(() => {
 		fetchLeader();

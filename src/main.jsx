@@ -13,7 +13,7 @@ const RootApp = () => {
 		>
 			<LeaderBoard></LeaderBoard>
 			<Scheduale> </Scheduale>
-			<SchedualePopup></SchedualePopup>
+			{/* <SchedualePopup></SchedualePopup> */}
 		</div>
 	);
 };
