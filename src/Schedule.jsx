@@ -35,8 +35,8 @@ const Scheduale = () => {
 				<div className="flex flex-col items-center justify-center text-center p-4 text-amber-300">
 					<p className="text-sm">
 						Times are in <strong>Zulu (UTC)</strong>. Add{" "}
-						<strong>+1 hr</strong> to EU time in winter (or{" "}
-						<strong>+2 hrs</strong> in summer). Dates are in{" "}
+						<strong>+1 hr</strong> to EU time in winter and{" "}
+						<strong>+2 hrs</strong> in summer. Dates are in{" "}
 						<strong>Idiot format aka USA {":)"}</strong>
 					</p>
 				</div>
