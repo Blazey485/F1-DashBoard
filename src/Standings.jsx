@@ -15,7 +15,7 @@ const Standings = (props) => {
 	const { constructorId, name } = Constructors[0] || {};
 
 	return (
-		<div className="bg-blue-600 p-1 text-white w-99 border-2 border-black my-1.5 mx-2 rounded-lg shadow-md">
+		<div className="bg-blue-600 p-1 text-white w-99 border-2 border-black my-1.5 mx-2 rounded-lg shadow-md max-w-md">
 			<div className="Driver flex justify-between items-center">
 				{/* Position */}
 				<span className="font-black text-lg bg-yellow-400 text-black px-2.5 py-1 rounded-md">

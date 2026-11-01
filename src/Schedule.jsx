@@ -30,8 +30,8 @@ const Scheduale = () => {
 	};
 
 	return (
-		<div className="text-gray-300 w-80">
-			<div className="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden flex flex-col">
+		<div className="text-gray-300 w-full ">
+			<div className="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden flex flex-col max-w-sm ">
 				<div className="flex flex-col items-center justify-center text-center p-4 text-amber-300">
 					<p className="text-sm">
 						Times are in <strong>Zulu (UTC)</strong>. Add{" "}

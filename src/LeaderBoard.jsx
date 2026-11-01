@@ -24,8 +24,8 @@ const LeaderBoard = () => {
 	};
 
 	return (
-		<div className="bg-black-100">
-			<div className="Drivers">
+		<div className="bg-black-100 max-w-2xl">
+			<div className="Drivers max-w-2xl">
 				{masterLD.map((Champions) => (
 					<Standing
 						key={Champions.position}
