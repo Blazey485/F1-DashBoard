@@ -32,10 +32,14 @@ const Scheduale = () => {
 	return (
 		<div className="text-gray-300 w-80">
 			<div className="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden flex flex-col">
-				<h2 className="justify-center items-center text-amber-300">
-					BTW THE TIME IS UTC +0 MEANING THE TIME IS 2 HOURS
-					BEHIND EU-TIME, AND THE DATE IS USA FORMAT
-				</h2>
+				<div className="flex flex-col items-center justify-center text-center p-4 text-amber-300">
+					<p className="text-sm">
+						Times are in <strong>Zulu (UTC)</strong>. Add{" "}
+						<strong>+1 hr</strong> to EU time in winter (or{" "}
+						<strong>+2 hrs</strong> in summer). Dates are in{" "}
+						<strong>Idiot format aka USA {":)"}</strong>
+					</p>
+				</div>
 				{scheduale.map((race) => (
 					<div key={race.round}>
 						<button
