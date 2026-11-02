@@ -17,6 +17,10 @@
 *   **Ergast F1 API** For data
 
 ---
+   Upcoming features during next push:
+   https://api.jolpi.ca/ergast/f1/2026/constructorstandings/?format=json
+   Contructors. 
+
 
 
 
