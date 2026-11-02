@@ -6,11 +6,7 @@ import Scheduale from "./Schedule";
 import SchedualePopup from "./SchedulePopup";
 const RootApp = () => {
 	return (
-		<div
-			className="
-			flex
-			bg-black"
-		>
+		<div className="flex bg-black">
 			<LeaderBoard></LeaderBoard>
 			<Scheduale> </Scheduale>
 			{/* <SchedualePopup></SchedualePopup> */}
