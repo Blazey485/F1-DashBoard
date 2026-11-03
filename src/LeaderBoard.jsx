@@ -34,6 +34,7 @@ const LeaderBoard = () => {
 					/>
 				))}
 			</div>
+			<Constructors />
 		</div>
 	);
 };
