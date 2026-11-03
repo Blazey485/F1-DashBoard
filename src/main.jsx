@@ -9,7 +9,6 @@ const RootApp = () => {
 		<div className="flex bg-black">
 			<LeaderBoard></LeaderBoard>
 			<Scheduale> </Scheduale>
-			{/* <SchedualePopup></SchedualePopup> */}
 		</div>
 	);
 };
