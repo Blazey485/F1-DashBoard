@@ -23,7 +23,7 @@ const Constructors = () => {
 			}
 
 			const json = await Constructors.json();
-			console.log(json)
+			console.log(json);
 			setConstructorsChamp(
 				json?.MRData?.StandingsTable?.StandingsLists[0]
 					?.ConstructorStandings
@@ -38,7 +38,17 @@ const Constructors = () => {
 	return (
 		<div className="CONSTRUCTOR_PARENT">
 			<div>
-				<h1 className="text-white">Constructor champion ship leader board.</h1>
+				<h1 className="text-white">
+					Constructor champion ship leader board.
+				</h1>
+
+				<div className="text-white">
+					{constructorsChamp.map((standings) => (
+						<div key={standings.position}>
+							<h1> Position: {standings.position}</h1>
+						</div>
+					))}
+				</div>
 			</div>
 		</div>
 	);
