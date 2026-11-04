@@ -45,7 +45,24 @@ const Constructors = () => {
 				<div className="text-white">
 					{constructorsChamp.map((standings) => (
 						<div key={standings.position}>
-							<h1> Position: {standings.position}</h1>
+							<div className="flex	">
+								<h1> Position: {standings.position}</h1>
+								<h2>
+									{" "}
+									Constructor: {standings.Constructor?.name}
+								</h2>
+								<p>
+									{" "}
+									Name: {standings.Constructor?.nationality}
+								</p>
+
+								<p>
+									{" "}
+									Points :{standings.Constructor?.points}
+								</p>
+
+								<p> wins :{standings.Constructor?.wins}</p>
+							</div>
 						</div>
 					))}
 				</div>
