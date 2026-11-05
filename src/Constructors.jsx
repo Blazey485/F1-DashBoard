@@ -42,26 +42,27 @@ const Constructors = () => {
 					Constructor champion ship leader board.
 				</h1>
 
-				<div className="text-white">
+				<div className="text-white w-120 border-2 border-black my-1.5 mx-2 rounded-lg max-w-md">
 					{constructorsChamp.map((standings) => (
 						<div key={standings.position}>
-							<div className="flex	">
-								<h1> Position: {standings.position}</h1>
-								<h2>
+							<div className="flex justify-between items-center">
+								<span className="font-black text-lg bg-purple-500 px-2.5 rounded-md">
 									{" "}
-									Constructor: {standings.Constructor?.name}
-								</h2>
-								<p>
+									{standings.position}
+								</span>
+
+								<span className="flex gap-2 font-semibold">
 									{" "}
+									{standings.Constructor?.name}
+								</span>
+
+								<span>
 									Name: {standings.Constructor?.nationality}
-								</p>
+								</span>
 
-								<p>
-									{" "}
-									Points :{standings.Constructor?.points}
-								</p>
+								<span> wins :{standings.wins}</span>
 
-								<p> wins :{standings.Constructor?.wins}</p>
+								<span> Points :{standings.points}</span>
 							</div>
 						</div>
 					))}
