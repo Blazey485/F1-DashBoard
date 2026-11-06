@@ -37,10 +37,10 @@ const Constructors = () => {
 
 	return (
 		<div className="CONSTRUCTOR_PARENT">
-			<div className="text-white w-99 border-2 border-black my-1.5 mx-2 rounded-lg max-w-md">
+			<div className="text-white w-99 border-black my-1.5 mx-2 rounded-lg max-w-md">
 				{constructorsChamp.map((standings) => (
 					<div key={standings.position}>
-						<div className="bg-blue-600 p-1 text-white w-99 border-black my-1  rounded-lg shadow-md max-w-md">
+						<div className="bg-blue-600 p-1 border-2 text-white w-99 border-black my-1  rounded-lg shadow-md max-w-md">
 							<div className="Driver flex justify-between items-center p-1">
 								{""}
 								<span className="font-black text-lg bg-yellow-400 text-black px-3 py-1.5 rounded-md">

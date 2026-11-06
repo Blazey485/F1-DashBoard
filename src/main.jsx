@@ -3,11 +3,14 @@ import { createRoot } from "react-dom/client";
 import LeaderBoard from "./LeaderBoard";
 import "./css/LeaderBoard.css";
 import Scheduale from "./Schedule";
-import SchedualePopup from "./SchedulePopup";
+import Constructors from "./Constructors";
 const RootApp = () => {
 	return (
 		<div className="flex bg-black">
 			<LeaderBoard></LeaderBoard>
+			{/* 
+				<Constructors />
+			 */}
 			<Scheduale> </Scheduale>
 		</div>
 	);

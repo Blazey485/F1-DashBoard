@@ -25,16 +25,16 @@ const LeaderBoard = () => {
 	};
 
 	return (
-		<div className="bg-black-100 max-w-2xl">
-			<div className="Drivers max-w-2xl">
+		<div className="">
+			<div className="Drivers max-w-2xl bg-blue-900 p-2">
 				{masterLD.map((Champions) => (
 					<Standing
 						key={Champions.position}
 						apiData={Champions}
 					/>
 				))}
+				<Constructors />
 			</div>
-			<Constructors />
 		</div>
 	);
 };
