@@ -37,39 +37,40 @@ const Constructors = () => {
 
 	return (
 		<div className="CONSTRUCTOR_PARENT">
-			<div>
-				<h1 className="text-white">
-					Constructor champion ship leader board.
-				</h1>
+			<div className="text-white w-99 border-2 border-black my-1.5 mx-2 rounded-lg max-w-md">
+				{constructorsChamp.map((standings) => (
+					<div key={standings.position}>
+						<div className="bg-blue-600 p-1 text-white w-99 border-black my-1  rounded-lg shadow-md max-w-md">
+							<div className="Driver flex justify-between items-center">
+								{""}
+								<span className="font-black text-lg bg-yellow-400 text-black px-1 rounded-md">
+									{" "}
+									{standings.position}
+								</span>
 
-				<div className="text-white w-99 border-2 border-black my-1.5 mx-2 rounded-lg max-w-md">
-					{constructorsChamp.map((standings) => (
-						<div key={standings.position}>
-							<div className="bg-blue-600 p-1 text-white w-99 border-2 border-black my-1.5 mx-2 rounded-lg shadow-md max-w-md">
-								<div className="Driver flex justify-between items-center">
-									<span className="font-black text-lg bg-purple-500 px-2.5 rounded-md">
-										{" "}
-										{standings.position}
-									</span>
+								<span className="flex gap-2 font-semibold bg-blue-500 w-20 justify-around p-1 rounded align-middle text-2xl">
+									{" "}
+									{standings.Constructor?.name}
+								</span>
 
-									<span className="flex gap-2 font-semibold">
-										{" "}
-										{standings.Constructor?.name}
-									</span>
+								<span className="text-sky-200 text-sm font-medium italic shrink-0 hidden sm:inline">
+									{" "}
+									{standings.Constructor?.nationality}
+								</span>
 
-									<span>
-										Name:{" "}
-										{standings.Constructor?.nationality}
-									</span>
+								<span className="font-bold bg-blue-400 rounded-2xl w-20 flex text-center justify-around">
+									{" "}
+									{standings.wins} Wins
+								</span>
 
-									<span> wins :{standings.wins}</span>
-
-									<span> Points :{standings.points}</span>
-								</div>
+								<span className="bg-blue-500 rounded w-20 flex text-center justify-around font-extrabold">
+									{" "}
+									{standings.points} pts
+								</span>
 							</div>
 						</div>
-					))}
-				</div>
+					</div>
+				))}
 			</div>
 		</div>
 	);
