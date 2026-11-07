@@ -1,75 +1,69 @@
-# F1 DashBoard made with React.
+# F1 DashBoard made with React
 
-A Website where you can keep track of the current season.
+A website where you can keep track of the current F1 season.
 
-#### Features:
+## Features
 
-- Drivers Standing
-- List Of Grand Prix Weekends
-- Schedules Of Practices, Sprint Quali, Sprint, Quali, Grand Prix
-- `More Coming Soon, I Aint Finished`
+- Driver standings
+- Constructor standings
+- List of Grand Prix weekends
+- Schedules for practice, sprint quali, sprint, quali and Grand Prix
+- Live qualifying data (in progress, needs the optional live server below)
+- `More coming soon, I ain't finished`
 
----
+## Tech Stack
 
-### 🛠️ Tech Stack
-
-- **React** (with Hooks: useState, useEffect)
+- **React** (hooks: useState, useEffect) with **Vite**
 - **Tailwind CSS** for styling
-- **Ergast F1 API** For data
+- **Jolpica F1 API** (the Ergast successor) for standings and schedules
 
----
+## What the different files are for
 
-Upcoming features during next push:
-https://api.jolpi.ca/ergast/f1/2026/constructorstandings/?format=json
-Contructors.
+- `LeaderBoard.jsx` fetches the driver standings and renders one `Standings.jsx` row per driver. It also renders `Constructors.jsx`.
+- `Constructors.jsx` is the leaderboard for **teams**, not drivers. It fetches its own data.
+- `Schedule.jsx` lists the race calendar. `SchedulePopup.jsx` shows the session times for a weekend.
+- `main.jsx` is where everything renders.
+- `f1-livetiming-api/` is a separate live timing server made by julesr0y (see Credits). It is not my work.
 
-## What the different files are for:
+## How to install and run locally
 
-- `Standings.jsx`, `LeaderBoard.jsx` are related. Standings is where you can find the api fetching, and in LeaderBoard its just the rendering of the standings.jsx component. Idk why but im lazy to change it
-
-- `Schedule.jsx`, `SchedulePopup` are for the race calenders and etc. In Schedule you can see when the next weekend is, while in the `popup` you are able to view the practice, quali and the exact time of the things happening in the weekend.
-
-- `main.jsx` is where everything renders at end.
-
-- `Constructor.jsx` is for the leaderboard for **teams** and **not** for drivers. The component is rendered inside Standings.jsx
-
-# How to Install and Run Locally
-
-Required tools to download : **`NPM`** and **` Git`**
-
-- Step 1:
+Required tools: **Node.js (with npm)** and **Git**
 
 ```bash
-  git clone https://github.com/Blazey485/F1-DashBoard.git
+git clone https://github.com/Blazey485/F1-DashBoard.git
+cd F1-DashBoard
+npm install
+npm run dev
 ```
 
-- Step 2: Open the folder in the terminal then run
+### Optional: live data server (if you want to get live data during sessions)
+
+Live data comes from [f1-livetiming-api](https://github.com/julesr0y/f1-livetiming-api) by julesr0y, included under its own license. Open a second terminal and run:
 
 ```bash
-   npm install
+cd f1-livetiming-api
+npm install
+npm start
 ```
 
-- Step 3: After its all of the node-modules are installed run
+It runs on `http://localhost:3000`. It only has data **while an F1 session is live**, and only while it is running on your own machine, so it won't work on a deployed copy of the site.
 
-```bash
-   npm run dev
-```
+## How to contribute
 
-# How to contribute to the project
+Just fork it and create a Pull Request. I have one rule:
 
-Straight forward, just fork it and create a Pull Request. But i do have 1 rule.
-
-1.  Detailed pr –- explain as good as you can of what you changed and why, feel free to use comments aswell within the code to explain, as long as you can explain it throughly
+1. Write a detailed PR. Explain what you changed and why. Comments in the code are welcome, as long as you explain it thoroughly.
 
 ## License
 
-This project is open-source and available under the [MIT License](LICENSE).
+This project is open-source under the [MIT License](LICENSE).
+
+The `f1-livetiming-api/` folder is a third-party project under the Apache License 2.0. See `f1-livetiming-api/LICENSE` and `f1-livetiming-api/NOTICE`.
+
+## Credits
+
+Live timing server: [f1-livetiming-api](https://github.com/julesr0y/f1-livetiming-api) by julesr0y, Apache 2.0, included unmodified.
 
 ## Disclaimer
 
-This application is an unofficial, fan-made hobby project and is not affiliated in any way with Formula One Licensing B.V., Formula 1, or any specific Formula 1 racing team. All racing data is fetched via the Ergast F1 API wrapper.
-
-## Credits for the LIVE DATA
-Live timing server: [f1-livetiming-api](https://github.com/julesr0y/f1-livetiming-api) by julesr0y, Apache 2.0.
-
-
+This is an unofficial, fan-made hobby project and is not affiliated with Formula One Licensing B.V., Formula 1, the FIA or any F1 team. Standings and schedules come from the Jolpica F1 API. The live server reads F1's unofficial live timing stream, which may change or stop working at any time.
