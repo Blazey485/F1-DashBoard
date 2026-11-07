@@ -62,7 +62,7 @@ The `f1-livetiming-api/` folder is a third-party project under the Apache Licens
 
 ## Credits
 
-Live timing server: [f1-livetiming-api](https://github.com/julesr0y/f1-livetiming-api) by julesr0y, Apache 2.0, included unmodified.
+Live timing server: [f1-livetiming-api](https://github.com/julesr0y/f1-livetiming-api) by julesr0y, Apache 2.0. Included with the generated `docs/` folder removed.
 
 ## Disclaimer
 
