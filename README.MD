@@ -68,3 +68,8 @@ This project is open-source and available under the [MIT License](LICENSE).
 ## Disclaimer
 
 This application is an unofficial, fan-made hobby project and is not affiliated in any way with Formula One Licensing B.V., Formula 1, or any specific Formula 1 racing team. All racing data is fetched via the Ergast F1 API wrapper.
+
+## Credits for the LIVE DATA
+Live timing server: [f1-livetiming-api](https://github.com/julesr0y/f1-livetiming-api) by julesr0y, Apache 2.0.
+
+
