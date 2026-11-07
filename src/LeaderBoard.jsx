@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 import Standing from "./Standings.jsx";
 import Constructors from "./Constructors.jsx";
-
+import Qualifying from "./Qualifying.jsx";
 //! Btw this is for the driver constructor
 const LeaderBoard = () => {
 	const [masterLD, setMasterLD] = useState([]);
@@ -34,6 +34,8 @@ const LeaderBoard = () => {
 					/>
 				))}
 				<Constructors />
+
+				<Qualifying></Qualifying>
 			</div>
 		</div>
 	);
