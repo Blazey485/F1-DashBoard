@@ -4,14 +4,16 @@ import LeaderBoard from "./LeaderBoard";
 import "./css/LeaderBoard.css";
 import Scheduale from "./Schedule";
 import Constructors from "./Constructors";
+import NavBar from "./NavBar";
 const RootApp = () => {
 	return (
 		<div className="flex bg-black">
-			<LeaderBoard></LeaderBoard>
+			<NavBar></NavBar>
+			{/* <LeaderBoard></LeaderBoard> */}
 			{/* 
 				<Constructors />
 			 */}
-			<Scheduale> </Scheduale>
+			{/* <Scheduale> </Scheduale> */}
 		</div>
 	);
 };
