@@ -23,13 +23,11 @@ const Constructors = () => {
 			}
 
 			const json = await Constructors.json();
-			console.log(json);
+
 			setConstructorsChamp(
 				json?.MRData?.StandingsTable?.StandingsLists[0]
 					?.ConstructorStandings
 			);
-
-			console.log(setConstructorsChamp);
 		} catch (err) {
 			console.log("error fetching:", err);
 		}

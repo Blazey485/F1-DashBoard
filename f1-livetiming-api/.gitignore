@@ -113,6 +113,8 @@ dist
 # Docusaurus cache and generated files
 .docusaurus
 
+f1-livetiming-api/docs
+
 # Serverless directories
 .serverless/
 
