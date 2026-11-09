@@ -1,12 +1,12 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const NavBar = () => {
-	const [toggle, setToggled] = useState(false);
+	const [activeSection, setActiveSection] =
+		useState("static");
 
 	return (
 		<div className="text-white bg-purple-800 max-w-90 flex flex-col gap-3 max-h-max p-6">
 			{/*  */}
-			
 
 			<div className="STATIC justify-center">
 				<h2 className="flex justify-around">
