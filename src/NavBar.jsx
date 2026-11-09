@@ -1,10 +1,14 @@
+import { useState } from "react";
+
 const NavBar = () => {
 	return (
 		<div className="text-white bg-purple-800 max-w-90 flex flex-col gap-3 max-h-max p-6">
 			{/*  */}
 
 			<div className="STATIC justify-center">
-				<h2 className="">Hello Navbar Static</h2>
+				<h2 className="flex justify-around">
+					Hello Navbar Static
+				</h2>
 				<hr />
 				<button className="bg-pink-500 rounded-md cursor-pointer p-1 py-7 my-6 w-full hover:scale-105  delay-200  transform scale-100 ">
 					Drivers Standings && Constructor Standings
@@ -16,9 +20,13 @@ const NavBar = () => {
 			</div>
 
 			{/*  */}
+			<hr className="h-2 border-2" />
 
 			<div className="LIVE">
-				<h2>hello navbar live</h2>
+				<h2 className="flex justify-around my-2">
+					hello navbar live
+				</h2>
+				<hr />
 
 				<button className="bg-pink-500 rounded-md cursor-pointer p-1 py-7 my-6 w-full hover:scale-105  delay-200  transform scale-100 ">
 					Radio Message
