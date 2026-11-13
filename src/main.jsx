@@ -5,13 +5,14 @@ import "./css/LeaderBoard.css";
 import Scheduale from "./Schedule";
 import Constructors from "./Constructors";
 import NavBar from "./NavBar";
+import MenuBtn from "./MenuBtn";
 const RootApp = () => {
 	return (
 		<div className="flex bg-black">
-			{/* <NavBar></NavBar> */}
-			<LeaderBoard></LeaderBoard>
+			<MenuBtn></MenuBtn>
+			{/* <LeaderBoard></LeaderBoard>
 
-			<Scheduale> </Scheduale>
+			<Scheduale> </Scheduale> */}
 		</div>
 	);
 };

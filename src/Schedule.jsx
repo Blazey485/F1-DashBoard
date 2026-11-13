@@ -37,7 +37,7 @@ const Scheduale = () => {
 						<button
 							className="cursor-pointer w-full bg-slate-800/50 hover:bg-slaitte-800 transition-colors text-left border-b border-slate-800 size-15 border-2 rounded "
 							onClick={() =>
-								setCurrentSchedule( 
+								setCurrentSchedule(
 									currentSchedule === race.round
 										? null
 										: race.round

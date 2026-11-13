@@ -1,10 +1,20 @@
+import { useState } from "react";
 import NavBar from "./NavBar";
 
 const ButtonPop = () => {
-	const [open, setOpen] = useState(null);
+	const [toggle, setToggle] = useState(null);
 	return (
-		<div>
-			<button></button>
+		<div className="text-white">
+			<button
+				className="p-10 bg-amber-300 text-black rounded-2xl"
+				onClick={() => setToggle(!toggle)}
+			>
+				Menu:{" "}
+			</button>
+
+			{toggle && <NavBar />}
 		</div>
 	);
 };
+
+export default ButtonPop;
