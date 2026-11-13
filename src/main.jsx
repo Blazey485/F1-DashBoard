@@ -8,12 +8,10 @@ import NavBar from "./NavBar";
 const RootApp = () => {
 	return (
 		<div className="flex bg-black">
-			<NavBar></NavBar>
-			{/* <LeaderBoard></LeaderBoard> */}
-			{/* 
-				<Constructors />
-			 */}
-			{/* <Scheduale> </Scheduale> */}
+			{/* <NavBar></NavBar> */}
+			<LeaderBoard></LeaderBoard>
+
+			<Scheduale> </Scheduale>
 		</div>
 	);
 };

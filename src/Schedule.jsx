@@ -31,21 +31,13 @@ const Scheduale = () => {
 
 	return (
 		<div className="text-gray-300">
-			<div className="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden flex flex-col max-w-md ">
-				<div className="flex flex-col items-center justify-center text-center p-4 text-amber-300">
-					<p className="text-sm">
-						Times are in <strong>Zulu (UTC)</strong>. Add{" "}
-						<strong>+1 hr</strong> to EU time in winter and{" "}
-						<strong>+2 hrs</strong> in summer. Dates are in{" "}
-						<strong>Idiot format aka USA {":)"}</strong>
-					</p>
-				</div>
+			<div className="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden flex flex-col max-w-md p-1 ">
 				{scheduale.map((race) => (
 					<div key={race.round}>
 						<button
-							className="cursor-pointer w-full bg-slate-800/50 hover:bg-slaitte-800 transition-colors text-left border-b border-slate-800/80 last:border-b-0 size-15"
+							className="cursor-pointer w-full bg-slate-800/50 hover:bg-slaitte-800 transition-colors text-left border-b border-slate-800 size-15 border-2 rounded "
 							onClick={() =>
-								setCurrentSchedule(
+								setCurrentSchedule( 
 									currentSchedule === race.round
 										? null
 										: race.round
