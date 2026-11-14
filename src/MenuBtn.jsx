@@ -6,8 +6,9 @@ const ButtonPop = () => {
 	return (
 		<div className="text-white">
 			<button
-				className="p-10 bg-amber-300 text-black rounded-2xl"
+				className="text-white bg-purple-800 max-w-90 flex flex-col gap-3 max-h-max p-6 rounded "
 				onClick={() => setToggle(!toggle)}
+				style={{ width: toggle ? "400px" : "200px" }}
 			>
 				Menu:{" "}
 			</button>

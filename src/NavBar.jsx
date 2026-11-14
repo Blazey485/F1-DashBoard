@@ -6,7 +6,7 @@ const NavBar = () => {
 
 	return (
 		<>
-			<div className="text-white bg-purple-800 max-w-90 flex flex-col gap-3 max-h-max p-6">
+			<div className="text-white bg-purple-700 max-w-90 flex flex-col gap-3 max-h-max p-6 rounded">
 				{/*  */}
 
 				<div className="STATIC justify-center">
