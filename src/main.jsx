@@ -1,11 +1,11 @@
 import { createRoot } from "react-dom/client";
 
-import LeaderBoard from "./LeaderBoard";
-import "./css/LeaderBoard.css";
-import Scheduale from "./Schedule";
-import Constructors from "./Constructors";
-import NavBar from "./NavBar";
-import MenuBtn from "./MenuBtn";
+import LeaderBoard from "./pages/LeaderBoard/LeaderBoard";
+import "./main.css";
+import Scheduale from "./pages/Schedule/Schedule";
+import Constructors from "./pages/LeaderBoard/Constructors";
+import NavBar from "./components/NavBar";
+import MenuBtn from "./components/MenuBtn";
 const RootApp = () => {
 	return (
 		<div className="flex bg-black">
