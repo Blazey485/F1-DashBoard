@@ -1,5 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import MenuBtn from "./MenuBtn";
+
+import { Link } from "react-router";
+
 const NavBar = () => {
 	const [activeSection, setActiveSection] =
 		useState("static");
@@ -14,14 +17,18 @@ const NavBar = () => {
 						Hello Navbar Static
 					</h2>
 					<hr />
-					<button className="bg-pink-500 rounded-md cursor-pointer p-1 py-7 my-6 w-full hover:scale-105  duration-75 active:scale-90  transform scale-100 ">
-						Drivers Standings && Constructor Standings
-					</button>
+					<Link to="/LeaderBoard">
+						<button className="bg-pink-500 rounded-md cursor-pointer p-1 py-7 my-6 w-full hover:scale-105  duration-75 active:scale-90  transform scale-100 ">
+							Drivers Standings && Constructor Standings
+						</button>
+					</Link>
 
-					<button className="bg-pink-500 rounded-md cursor-pointer p-1 py-7 my-6 w-full hover:scale-105  duration-75 active:scale-90  transform scale-100 ">
-						{" "}
-						Upcoming Sessions / Schedules
-					</button>
+					<Link to="/Schedule">
+						<button className="bg-pink-500 rounded-md cursor-pointer p-1 py-7 my-6 w-full hover:scale-105  duration-75 active:scale-90  transform scale-100 ">
+							{" "}
+							Upcoming Sessions / Schedules
+						</button>
+					</Link>
 				</div>
 
 				{/*  */}
