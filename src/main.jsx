@@ -16,6 +16,7 @@ const RootApp = () => {
 	return (
 		<div className="flex bg-black">
 			<MenuBtn></MenuBtn>
+			<Outlet></Outlet>
 		</div>
 	);
 };
@@ -42,6 +43,4 @@ const rootLayout = createRoot(
 	document.getElementById("root")
 );
 
-rootLayout.render(
-	<RouterProvider router={routing} />
-);
+rootLayout.render(<RouterProvider router={routing} />);
