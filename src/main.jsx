@@ -12,11 +12,13 @@ import Constructors from "./pages/LeaderBoard/Constructors";
 import NavBar from "./components/NavBar";
 import MenuBtn from "./components/MenuBtn";
 import { Children } from "react";
+import Results from "./LivePages/Results";
 const RootApp = () => {
 	return (
 		<div className="flex bg-black">
 			<MenuBtn></MenuBtn>
 			<Outlet></Outlet>
+			<Results></Results>
 		</div>
 	);
 };
