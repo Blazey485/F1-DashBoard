@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const Results = () => {
-	const [showResult, setShowResult] = useState([]);
+	const [showResult, setShowResult] = useState(null);
 
 	useEffect(() => {
 		DataResult();
@@ -21,13 +21,7 @@ const Results = () => {
 			}
 
 			const json = await RaceResults.json();
-			console.log(
-				"Leaderboard response:",
-				json?.Leaderboard
-			);
-			setShowResult(json?.Leaderboard);
-
-			console.log(setShowResult);
+			setShowResult(json);
 		} catch (err) {
 			console.log(
 				"error fetching check if the you ran `npm run dev` in both folders.",
@@ -36,9 +30,32 @@ const Results = () => {
 		}
 	};
 
+	const racingNumbers = showResult?.Leaderboard ?? [];
+	const lines = showResult?.Lines ?? {};
+
 	return (
 		<div>
-			<h2>Results</h2>
+			<div>
+				<h2>
+					Lap number:{" "}
+					{showResult?.LapCount?.CurrentLap ?? "—"}
+				</h2>
+				{racingNumbers.map((racingNumber) => {
+					const driver = lines[racingNumber] ?? {};
+
+					return (
+						<div key={racingNumber}>
+							<span>{driver.Position}</span>
+							<span>
+								{driver.Tla ??
+									driver.FullName ??
+									racingNumber}
+							</span>
+							<span>{driver.GapToLeader?.Value ?? ""}</span>
+						</div>
+					);
+				})}
+			</div>
 		</div>
 	);
 };
