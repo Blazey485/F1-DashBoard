@@ -21,9 +21,13 @@ const Results = () => {
 			}
 
 			const json = await RaceResults.json();
-			setShowResult(json);
+			console.log(
+				"Leaderboard response:",
+				json?.Leaderboard
+			);
+			setShowResult(json?.Leaderboard);
 
-			console.log(setShowResult?.Leaderboard);
+			console.log(setShowResult);
 		} catch (err) {
 			console.log(
 				"error fetching check if the you ran `npm run dev` in both folders.",
@@ -34,7 +38,7 @@ const Results = () => {
 
 	return (
 		<div>
-			<h2>Hello test</h2>
+			<h2>Results</h2>
 		</div>
 	);
 };
