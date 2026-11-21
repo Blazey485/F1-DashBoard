@@ -39,24 +39,15 @@ const NavBar = () => {
 						hello navbar live
 					</h2>
 					<hr />
-
-					<button className="bg-pink-500 rounded-md cursor-pointer p-1 py-7 my-6 w-full hover:scale-105  duration-75 active:scale-90  transform scale-100 ">
-						{" "}
-						Radio Message
-					</button>
-					<button className="bg-pink-500 rounded-md cursor-pointer p-1 py-7 my-6 w-full hover:scale-105  duration-75 active:scale-90  transform scale-100 ">
-						{" "}
-						Race Control
-					</button>
 					<Link to="/Session">
 						<button className="bg-pink-500 rounded-md cursor-pointer p-1 py-7 my-6 w-full hover:scale-105  duration-75 active:scale-90  transform scale-100 ">
 							{" "}
-							Session && Lap Counts
+							Session && Lap Counts && Race Timing
 						</button>
 					</Link>
 					<button className="bg-pink-500 rounded-md cursor-pointer p-1 py-7 my-6 w-full hover:scale-105  duration-75 active:scale-90  transform scale-100 ">
 						{" "}
-						Race Leader Board
+						Race Control
 					</button>
 				</div>
 			</div>
