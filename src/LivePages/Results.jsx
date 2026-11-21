@@ -21,6 +21,7 @@ const Results = () => {
 			}
 
 			const json = await RaceResults.json();
+			console.log("Leaderboard response:", json);
 			setShowResult(json);
 		} catch (err) {
 			console.log(

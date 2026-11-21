@@ -1,5 +1,3 @@
-# 100% Human slopped project ✌️😂😩
-
 # F1 DashBoard made with React
 
 A website where you can keep track of the current F1 season.
