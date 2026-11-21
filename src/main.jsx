@@ -18,7 +18,6 @@ const RootApp = () => {
 		<div className="flex bg-black">
 			<MenuBtn></MenuBtn>
 			<Outlet></Outlet>
-			<Results></Results>
 		</div>
 	);
 };
@@ -36,6 +35,10 @@ const routing = createBrowserRouter([
 			{
 				path: "/LeaderBoard",
 				element: <LeaderBoard></LeaderBoard>
+			},
+			{
+				path: "/Session",
+				element: <Results />
 			}
 		]
 	}
