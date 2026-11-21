@@ -15,10 +15,10 @@ const Standings = (props) => {
 	const { constructorId, name } = Constructors[0] || {};
 
 	return (
-		<div className="bg-blue-600 p-1 text-white w-99 border-2 border-black my-1.5 mx-2 rounded-lg shadow-md max-w-md">
+		<div className="bg-zinc-900 p-1 text-white w-99 border-2 border-zinc-800 my-1.5 mx-2 rounded-lg shadow-md max-w-md">
 			<div className="Driver flex justify-between items-center">
 				{/* Position */}
-				<span className="font-black text-lg bg-yellow-400 text-black px-2.5 py-1 rounded-md">
+				<span className="font-black text-lg bg-amber-400 text-black px-2.5 py-1 rounded-md">
 					{position}
 				</span>
 
@@ -28,12 +28,12 @@ const Standings = (props) => {
 				</div>
 
 				{/* Team */}
-				<span className="text-sky-200 text-sm font-medium italic">
+				<span className="text-red-300 text-sm font-medium italic">
 					{name}
 				</span>
 
 				{/* Wins */}
-				<span className="bg-emerald-500/80 text-emerald-50 px-2 py-0.5 rounded text-sm font-medium">
+				<span className="bg-emerald-600/80 text-emerald-50 px-2 py-0.5 rounded text-sm font-medium">
 					Wins: {wins}
 				</span>
 

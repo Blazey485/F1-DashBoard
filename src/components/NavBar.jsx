@@ -9,7 +9,7 @@ const NavBar = () => {
 
 	return (
 		<>
-			<div className="text-white bg-purple-700 max-w-90 flex flex-col gap-3 max-h-max p-6 rounded">
+			<div className="text-white bg-zinc-900 max-w-90 flex flex-col gap-3 max-h-max p-6 rounded">
 				{/*  */}
 
 				<div className="STATIC justify-center">
@@ -18,13 +18,13 @@ const NavBar = () => {
 					</h2>
 					<hr />
 					<Link to="/LeaderBoard">
-						<button className="bg-pink-500 rounded-md cursor-pointer p-1 py-7 my-6 w-full hover:scale-105  duration-75 active:scale-90  transform scale-100 ">
+						<button className="bg-red-600 rounded-md cursor-pointer p-1 py-7 my-6 w-full hover:scale-105  duration-75 active:scale-90  transform scale-100 ">
 							Drivers Standings && Constructor Standings
 						</button>
 					</Link>
 
 					<Link to="/Schedule">
-						<button className="bg-pink-500 rounded-md cursor-pointer p-1 py-7 my-6 w-full hover:scale-105  duration-75 active:scale-90  transform scale-100 ">
+						<button className="bg-red-600 rounded-md cursor-pointer p-1 py-7 my-6 w-full hover:scale-105  duration-75 active:scale-90  transform scale-100 ">
 							{" "}
 							Upcoming Sessions / Schedules
 						</button>
@@ -40,12 +40,12 @@ const NavBar = () => {
 					</h2>
 					<hr />
 					<Link to="/Session">
-						<button className="bg-pink-500 rounded-md cursor-pointer p-1 py-7 my-6 w-full hover:scale-105  duration-75 active:scale-90  transform scale-100 ">
+						<button className="bg-red-600 rounded-md cursor-pointer p-1 py-7 my-6 w-full hover:scale-105  duration-75 active:scale-90  transform scale-100 ">
 							{" "}
 							Session && Lap Counts && Race Timing
 						</button>
 					</Link>
-					<button className="bg-pink-500 rounded-md cursor-pointer p-1 py-7 my-6 w-full hover:scale-105  duration-75 active:scale-90  transform scale-100 ">
+					<button className="bg-red-600 rounded-md cursor-pointer p-1 py-7 my-6 w-full hover:scale-105  duration-75 active:scale-90  transform scale-100 ">
 						{" "}
 						Race Control
 					</button>

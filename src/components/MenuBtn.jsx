@@ -8,7 +8,7 @@ const ButtonPop = () => {
 		<div className="text-white">
 			<Link to="/">
 				<button
-					className="text-white bg-purple-800 max-w-90 flex flex-col gap-3 max-h-max p-6 rounded 
+					className="text-white bg-red-600 max-w-90 flex flex-col gap-3 max-h-max p-6 rounded 
 				cursor-pointer
 				"
 					onClick={() => setToggle(!toggle)}

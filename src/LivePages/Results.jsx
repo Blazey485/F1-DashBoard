@@ -234,7 +234,7 @@ const Results = () => {
 					</table>
 				</div>
 
-				<p className="mt-4 text-center text-xs text-zinc-600">
+				<p className="mt-4 text-center text-xs text-zinc-500">
 					Best lap and gap to leader update live.
 				</p>
 			</div>

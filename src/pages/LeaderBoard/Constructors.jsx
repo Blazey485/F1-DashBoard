@@ -35,33 +35,33 @@ const Constructors = () => {
 
 	return (
 		<div className="CONSTRUCTOR_PARENT">
-			<div className="text-white w-99 border-black my-1.5 mx-2 rounded-lg max-w-md">
+			<div className="text-white w-99 border-zinc-800 my-1.5 mx-2 rounded-lg max-w-md">
 				{constructorsChamp.map((standings) => (
 					<div key={standings.position}>
-						<div className="bg-blue-600 p-1 border-2 text-white w-99 border-black my-1  rounded-lg shadow-md max-w-md">
+						<div className="bg-zinc-900 p-1 border-2 text-white w-99 border-zinc-800 my-1  rounded-lg shadow-md max-w-md">
 							<div className="Driver flex justify-between items-center p-1">
 								{""}
-								<span className="font-black text-lg bg-yellow-400 text-black px-3 py-1.5 rounded-md">
+								<span className="font-black text-lg bg-amber-400 text-black px-3 py-1.5 rounded-md">
 									{" "}
 									{standings.position}
 								</span>
 
-								<span className="flex gap-2 font-semibold bg-blue-500 w-20 justify-around p-1 rounded align-middle text-balance text-sm text-center">
+								<span className="flex gap-2 font-semibold bg-zinc-800 w-20 justify-around p-1 rounded align-middle text-balance text-sm text-center">
 									{" "}
 									{standings.Constructor?.name}
 								</span>
 
-								<span className="text-sky-200 text-sm font-medium italic shrink-0 hidden sm:inline p-2">
+								<span className="text-red-300 text-sm font-medium italic shrink-0 hidden sm:inline p-2">
 									{" "}
 									{standings.Constructor?.nationality}
 								</span>
 
-								<span className="font-bold bg-blue-400 rounded-2xl w-20 flex text-center justify-around p-2">
+								<span className="font-bold bg-emerald-600 rounded-2xl w-20 flex text-center justify-around p-2">
 									{" "}
 									{standings.wins} Wins
 								</span>
 
-								<span className="bg-blue-500 rounded w-20 flex text-center  p-2 justify-around font-extrabold">
+								<span className="bg-purple-600 rounded w-20 flex text-center  p-2 justify-around font-extrabold">
 									{" "}
 									{standings.points} pts
 								</span>
