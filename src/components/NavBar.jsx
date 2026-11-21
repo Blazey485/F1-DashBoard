@@ -3,7 +3,7 @@ import MenuBtn from "./MenuBtn";
 
 import { Link } from "react-router";
 
-const NavBar = () => {
+const NavBar = ({ onNavigate }) => {
 	const [activeSection, setActiveSection] =
 		useState("static");
 
@@ -17,13 +17,19 @@ const NavBar = () => {
 						Hello Navbar Static
 					</h2>
 					<hr />
-					<Link to="/LeaderBoard">
+					<Link
+						to="/LeaderBoard"
+						onClick={onNavigate}
+					>
 						<button className="bg-red-600 rounded-md cursor-pointer p-1 py-7 my-6 w-full hover:scale-105  duration-75 active:scale-90  transform scale-100 ">
 							Drivers Standings && Constructor Standings
 						</button>
 					</Link>
 
-					<Link to="/Schedule">
+					<Link
+						to="/Schedule"
+						onClick={onNavigate}
+					>
 						<button className="bg-red-600 rounded-md cursor-pointer p-1 py-7 my-6 w-full hover:scale-105  duration-75 active:scale-90  transform scale-100 ">
 							{" "}
 							Upcoming Sessions / Schedules
@@ -39,7 +45,10 @@ const NavBar = () => {
 						hello navbar live
 					</h2>
 					<hr />
-					<Link to="/Session">
+					<Link
+						to="/Session"
+						onClick={onNavigate}
+					>
 						<button className="bg-red-600 rounded-md cursor-pointer p-1 py-7 my-6 w-full hover:scale-105  duration-75 active:scale-90  transform scale-100 ">
 							{" "}
 							Session && Lap Counts && Race Timing
