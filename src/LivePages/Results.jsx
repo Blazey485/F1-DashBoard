@@ -5,6 +5,42 @@ const valueOrDash = (value) =>
 		? "—"
 		: value;
 
+const getSessionLabel = (session) => {
+	const { Name, Type } = session ?? {};
+
+	if (Name) return Name;
+	return valueOrDash(Type);
+};
+
+const getSessionCode = (label) => {
+	const text = label.toLowerCase();
+
+	if (
+		text.includes("sprint shootout") ||
+		text.includes("sprint qualifying")
+	)
+		return "SQ";
+	if (text.includes("sprint")) return "SPR";
+	if (text.includes("qualifying")) return "QUALI";
+	if (text.includes("race")) return "RACE";
+
+	const practice = text.match(/practice\s*(\d)/);
+	if (practice) return `FP${practice[1]}`;
+
+	const namedPractice = text.match(
+		/(first|second|third)\s+practice/
+	);
+	const practiceWords = {
+		first: "1",
+		second: "2",
+		third: "3"
+	};
+	if (namedPractice)
+		return `FP${practiceWords[namedPractice[1]]}`;
+
+	return null;
+};
+
 const Results = () => {
 	const [showResult, setShowResult] = useState(null);
 
@@ -38,6 +74,9 @@ const Results = () => {
 
 	const racingNumbers = showResult?.Leaderboard ?? [];
 	const lines = showResult?.Lines ?? {};
+	const sessionInfo = showResult?.Session ?? {};
+	const sessionLabel = getSessionLabel(sessionInfo);
+	const sessionCode = getSessionCode(sessionLabel);
 
 	return (
 		<main className="min-h-screen bg-black px-4 py-8 text-white">
@@ -48,18 +87,38 @@ const Results = () => {
 							Live Timing
 						</p>
 						<h1 className="mt-1 text-2xl font-bold sm:text-3xl">
-							Race Results
+							Live Results
 						</h1>
 					</div>
-					<div className="rounded-lg border border-zinc-800 bg-zinc-900 px-4 py-2 text-right">
-						<span className="block text-xs text-zinc-400">
-							Current lap
-						</span>
-						<span className="text-lg font-semibold tabular-nums">
-							{valueOrDash(
-								showResult?.LapCount?.CurrentLap
-							)}
-						</span>
+					<div className="flex flex-wrap items-stretch gap-3">
+						<div className="flex flex-col justify-center rounded-lg border border-zinc-800 bg-zinc-900 px-4 py-2">
+							<span className="block text-xs text-zinc-400">
+								Session
+							</span>
+							<div className="mt-0.5 flex items-center gap-2">
+								<span className="text-lg font-semibold">
+									{sessionLabel}
+								</span>
+								{sessionCode ? (
+									<span className="rounded bg-red-500/15 px-1.5 py-0.5 text-[10px] font-bold tracking-wider text-red-400">
+										{sessionCode}
+									</span>
+								) : null}
+							</div>
+							<span className="mt-0.5 block text-xs text-zinc-500">
+								{valueOrDash(sessionInfo.Meeting?.Name)}
+							</span>
+						</div>
+						<div className="flex flex-col justify-center rounded-lg border border-zinc-800 bg-zinc-900 px-4 py-2 text-right">
+							<span className="block text-xs text-zinc-400">
+								Current lap
+							</span>
+							<span className="text-lg font-semibold tabular-nums">
+								{valueOrDash(
+									showResult?.LapCount?.CurrentLap
+								)}
+							</span>
+						</div>
 					</div>
 				</header>
 
@@ -71,7 +130,7 @@ const Results = () => {
 									scope="col"
 									className="w-16 px-4 py-3"
 								>
-									Position
+									Pos
 								</th>
 								<th
 									scope="col"
