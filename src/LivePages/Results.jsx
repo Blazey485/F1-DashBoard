@@ -5,6 +5,13 @@ const valueOrDash = (value) =>
 		? "—"
 		: value;
 
+const getGapValue = (driver) => {
+	const gap = driver?.GapToLeader;
+
+	if (typeof gap === "string") return gap;
+	return gap?.Value;
+};
+
 const getSessionLabel = (session) => {
 	const { Name, Type } = session ?? {};
 
@@ -46,6 +53,9 @@ const Results = () => {
 
 	useEffect(() => {
 		DataResult();
+		const intervalId = setInterval(DataResult, 1000);
+
+		return () => clearInterval(intervalId);
 	}, []);
 
 	const DataResult = async () => {
@@ -62,7 +72,6 @@ const Results = () => {
 			}
 
 			const json = await RaceResults.json();
-			console.log("Leaderboard response:", json);
 			setShowResult(json);
 		} catch (err) {
 			console.log(
@@ -223,7 +232,7 @@ const Results = () => {
 											</td>
 											<td className="px-4 py-3 text-right font-mono tabular-nums text-zinc-300">
 												{valueOrDash(
-													driver.GapToLeader?.Value
+													getGapValue(driver)
 												)}
 											</td>
 										</tr>

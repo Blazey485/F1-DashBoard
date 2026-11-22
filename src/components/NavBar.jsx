@@ -14,7 +14,7 @@ const NavBar = ({ onNavigate }) => {
 
 				<div className="STATIC justify-center">
 					<h2 className="flex justify-around">
-						Hello Navbar Static
+						Static Data:
 					</h2>
 					<hr />
 					<Link
@@ -42,7 +42,8 @@ const NavBar = ({ onNavigate }) => {
 
 				<div className="LIVE">
 					<h2 className="flex justify-around my-2">
-						hello navbar live
+						Live Section. inorder to use this run 'npm run
+						dev' inside the folder named 'LIVE'
 					</h2>
 					<hr />
 					<Link
