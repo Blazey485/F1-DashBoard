@@ -1,16 +1,22 @@
 import { useState, useEffect } from "react";
 
+
+// i give valueOrDash to every key i am importing so if its empty it returns - if there is no data there
 const valueOrDash = (value) =>
 	value === null || value === undefined || value === ""
 		? "—"
 		: value;
 
+//grabs both shapes the api might send (string or num)
+// if it is a string i return it straight away, otherwise i dig into .Value, then valueOrDash tidies it up for the table
 const getGapValue = (driver) => {
 	const gap = driver?.GapToLeader;
 
 	if (typeof gap === "string") return gap;
 	return gap?.Value;
 };
+
+// this decides what session name to show in the header, it uses Name if the api sent one and falls back to Type
 
 const getSessionLabel = (session) => {
 	const { Name, Type } = session ?? {};
@@ -19,6 +25,8 @@ const getSessionLabel = (session) => {
 	return valueOrDash(Type);
 };
 
+// this turns the long session name into a short badge like SQ, SPR, QUALI, RACE so it fits next to the title
+// the order matters here, "sprint shootout" must be checked before "sprint" or it would wrongly become SPR
 const getSessionCode = (label) => {
 	const text = label.toLowerCase();
 
@@ -31,6 +39,7 @@ const getSessionCode = (label) => {
 	if (text.includes("qualifying")) return "QUALI";
 	if (text.includes("race")) return "RACE";
 
+	//some regex thing that passed the code review thats all ngl no diea what this even is
 	const practice = text.match(/practice\s*(\d)/);
 	if (practice) return `FP${practice[1]}`;
 
